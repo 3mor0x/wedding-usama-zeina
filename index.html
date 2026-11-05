@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Usama & Zeina - Wedding Invitation</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- زر الموسيقى الفاخر النابض -->
+    <div class="music-controller animate-pulse" onclick="toggleAudio()" id="musicToggleBtn" title="Toggle Music">
+        <div class="music-disk" id="musicDisk">🎵</div>
+        <span class="music-txt">MUSIC</span>
+    </div>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 1. شاشة البوابة الفاخرة (Splash Gateway) -->
+    <section class="gateway-overlay" id="gatewayScreen">
+        <div class="gateway-card">
+            <p class="gateway-pre">YOU ARE CORDIALLY INVITED TO THE WEDDING OF</p>
+            <h1 class="gateway-names">Usama <span class="gold-and">&</span> Zeina</h1>
+            <div class="gateway-star">✦ ✦ ✦</div>
+            <p class="gateway-date">Friday, 4 December 2026</p>
+            <button class="open-invitation-btn" onclick="openInvitation()">OPEN INVITATION ✉️</button>
+        </div>
+    </section>
+
+    <!-- 2. محتوى الدعوة الرئيسي -->
+    <main class="invitation-main" id="mainContent">
+        
+        <!-- شريط التنقل العلوي المضبوط -->
+        <nav class="top-navbar">
+            <a href="#home">HOME</a>
+            <a href="#details">DETAILS</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#rsvp">RSVP</a>
+        </nav>
+
+        <!-- الهيرو وخلفية الستائر -->
+        <header class="hero-section" id="home">
+            <div class="curtains-banner">
+                <img src="couple-main.jpg" alt="Usama & Zeina" class="hero-photo">
+                <div class="curtain-fade"></div>
+            </div>
+
+            <div class="hero-text-box">
+                <p class="together-text">TOGETHER WITH THEIR FAMILIES</p>
+                <h2 class="hero-couple-title">Usama <span class="gold-and">&</span> Zeina</h2>
+                <p class="invite-pleasure">request the pleasure of your company as they celebrate their wedding day</p>
+                
+                <div class="event-mini-info">
+                    <p>📅 Friday, 4 December 2026</p>
+                    <p>⏰ 08:00 PM</p>
+                    <p>📍 Luxury Hall</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- العداد التنازلي -->
+        <section class="section-block countdown-section reveal">
+            <p class="section-subtitle">COUNTING DOWN TO</p>
+            <h3 class="section-heading">Our Special Moment</h3>
+            <div class="gold-line"></div>
+
+            <div class="countdown-grid">
+                <div class="count-box">
+                    <span class="c-num" id="days">00</span>
+                    <span class="c-lbl">DAYS</span>
+                </div>
+                <div class="count-box">
+                    <span class="c-num" id="hours">00</span>
+                    <span class="c-lbl">HOURS</span>
+                </div>
+                <div class="count-box">
+                    <span class="c-num" id="minutes">00</span>
+                    <span class="c-lbl">MINUTES</span>
+                </div>
+                <div class="count-box">
+                    <span class="c-num" id="seconds">00</span>
+                    <span class="c-lbl">SECONDS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- تفاصيل الحفل (Details) -->
+        <section class="section-block details-section reveal" id="details">
+            <p class="section-subtitle">THE CELEBRATION</p>
+            <h3 class="section-heading">Wedding Details</h3>
+            <div class="gold-line"></div>
+
+            <div class="detail-card-box">
+                <div class="detail-item">
+                    <h4>When & Time</h4>
+                    <p>Friday, December 4, 2026</p>
+                    <p>08:00 PM</p>
+                </div>
+                <hr class="detail-divider">
+                <div class="detail-item">
+                    <h4>The Venue</h4>
+                    <p class="venue-highlight">Luxury Hall</p>
+                    <p>An enchanting evening celebration</p>
+                    <a href="https://maps.app.goo.gl/3HteVx3hVSZiQFgS8" target="_blank" class="map-link-btn">
+                        📍 Open Location in Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ذكريات الطفولة (Childhood Memories) - معدلة لظهور الصور بالكامل -->
+        <section class="section-block memories-section reveal">
+            <p class="section-subtitle">MEMORIES</p>
+            <h3 class="section-heading">Through The Years</h3>
+            <div class="gold-line"></div>
+
+            <div class="polaroid-container">
+                <div class="polaroid-card">
+                    <img src="usama-child.jpg" alt="Usama Childhood" class="child-img-fix">
+                </div>
+                <div class="polaroid-card">
+                    <img src="zeina-child.jpg" alt="Zeina Childhood" class="child-img-fix">
+                </div>
+            </div>
+        </section>
+
+        <!-- معرض الصور (Gallery) -->
+        <section class="section-block gallery-section reveal" id="gallery">
+            <p class="section-subtitle">OUR GALLERY</p>
+            <h3 class="section-heading">Moments Together</h3>
+            <div class="gold-line"></div>
+
+            <div class="gallery-grid-box">
+                <div class="gallery-frame">
+                    <img src="gallery-1.jpg" alt="Gallery 1">
+                </div>
+                <div class="gallery-frame">
+                    <img src="gallery-2.jpg" alt="Gallery 2">
+                </div>
+            </div>
+        </section>
+
+        <!-- تأكيد الحضور والتبريكات (RSVP) -->
+        <section class="section-block rsvp-section reveal" id="rsvp">
+            <p class="section-subtitle">JOIN US</p>
+            <h3 class="section-heading">RSVP & Wishes</h3>
+            <div class="gold-line"></div>
+
+            <div class="rsvp-card-box">
+                <input type="text" id="guestName" placeholder="Your Full Name" required>
+                <textarea id="guestMessage" rows="3" placeholder="Leave a warm message..." required></textarea>
+                <button onclick="addWish()" class="submit-rsvp-btn">CONFIRM ATTENDANCE & SEND WISH</button>
+            </div>
+
+            <div class="wishes-feed-box" id="wishesFeed"></div>
+        </section>
+
+        <!-- الخاتمة الفاخرة -->
+        <footer class="footer-section reveal">
+            <p class="footer-quote">Your Presence Is Our Greatest Gift</p>
+            <p class="footer-subtext">We are truly grateful to share this memorable day with our beloved family and friends.</p>
+            
+            <div class="footer-couple-badge">
+                <img src="couple-main.jpg" alt="Usama & Zeina">
+            </div>
+            
+            <h4 class="footer-thanks">Thank You For Being Part Of Our Story</h4>
+            <h2 class="footer-names">Usama & Zeina</h2>
+            <p class="footer-forever">Forever & Always</p>
+            <p class="footer-tag">#UsamaAndZeina2026</p>
+        </footer>
+
+    </main>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
