@@ -3,7 +3,7 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
-const wishesRef = database.ref('wishes/usama_zeina');
+const wishesRef = database.ref('wishes/usama_zeina_engagement');
 
 const audio = document.getElementById('bg-music');
 const disk = document.getElementById('musicDisk');

@@ -220,12 +220,12 @@ body {
     color: var(--gold);
 }
 
-/* الهيرو والستائر المعدلة لتوضيح النصوص بالكامل */
+/* الهيرو والستائر */
 .hero-section {
     position: relative;
     width: 100%;
     text-align: center;
-    background: var(--maroon-dark);
+    background: var(--cream-bg);
 }
 
 .curtains-banner {
@@ -243,55 +243,55 @@ body {
     display: block;
 }
 
-/* تدرج خلفية أنيق يوضح النصوص تماماً فوق الخلفية المارون */
 .curtain-fade {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        rgba(53, 14, 25, 0.05) 20%,
-        rgba(53, 14, 25, 0.85) 70%,
-        var(--maroon-dark) 100%
+        rgba(252, 249, 242, 0) 40%,
+        rgba(252, 249, 242, 0.9) 85%,
+        var(--cream-bg) 100%
     );
     pointer-events: none;
 }
 
 .hero-text-box {
-    padding: 20px 20px 45px 20px;
+    padding: 10px 20px 45px 20px;
     position: relative;
     z-index: 2;
-    background-color: var(--maroon-dark);
+    background-color: var(--cream-bg);
 }
 
 .together-text {
     font-family: 'Cinzel', serif;
     font-size: 0.72rem;
     letter-spacing: 2px;
-    color: #e2d2a8;
-    margin-bottom: 12px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
 }
 
-/* الأسماء باللون الذهبي الواضح والفخم */
 .hero-couple-title {
     font-family: 'Great Vibes', cursive;
     font-size: clamp(3.4rem, 10vw, 4.2rem);
-    color: var(--gold);
+    color: var(--maroon-bg);
     font-weight: 400;
-    margin-bottom: 12px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+}
+
+.gold-and {
+    color: var(--gold);
 }
 
 .invite-pleasure {
     font-size: 0.92rem;
-    color: #fcf9f2;
+    color: var(--text-dark);
     line-height: 1.6;
     margin-bottom: 24px;
-    opacity: 0.9;
 }
 
 .event-mini-info {
-    background: rgba(74, 21, 37, 0.9);
-    border: 1px solid var(--gold);
+    background: #ffffff;
+    border: 1px solid rgba(212, 175, 55, 0.5);
     border-radius: 14px;
     padding: 18px;
     box-shadow: var(--shadow-luxury);
@@ -299,7 +299,7 @@ body {
     flex-direction: column;
     gap: 8px;
     font-size: 0.9rem;
-    color: #ffffff;
+    color: var(--maroon-dark);
     font-weight: 600;
 }
 
@@ -428,7 +428,7 @@ body {
     font-weight: 600;
 }
 
-/* ذكريات الطفولة */
+/* ذكريات الطفولة والمعرض */
 .polaroid-container, .gallery-grid-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
